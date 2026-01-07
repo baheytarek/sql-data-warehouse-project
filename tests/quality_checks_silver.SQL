@@ -28,7 +28,7 @@ SELECT
     COUNT(*)
 FROM silver.crm_cust_info
 GROUP BY cst_id
-HAVING COUNT(*) != 1;
+HAVING COUNT(*) != 1 or cst_id IS NULL;
 GO
 
 -- Check for Unwanted Spaces
